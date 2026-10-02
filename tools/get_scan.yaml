@@ -1,0 +1,31 @@
+identity:
+  name: get_scan
+  author: doc-cheap
+  label:
+    en_US: Get Scan
+description:
+  human:
+    en_US: Read back a stored scan result by its ID while its retention window lasts. Free.
+  llm: Fetches a previously stored doc.cheap scan result by its scan ID. Works only for live keys and while the result is retained.
+parameters:
+  - name: scan_id
+    type: string
+    required: true
+    label:
+      en_US: Scan ID
+    human_description:
+      en_US: The id returned by Recognize Document.
+    llm_description: The scan id returned by recognize_document.
+    form: llm
+  - name: simplify
+    type: boolean
+    required: false
+    default: true
+    label:
+      en_US: Simplify
+    human_description:
+      en_US: Return a flat summary. Turn off to get the full stored answer.
+    form: form
+extra:
+  python:
+    source: tools/get_scan.py

@@ -1,0 +1,32 @@
+identity:
+  author: doc-cheap
+  name: doc_cheap
+  label:
+    en_US: doc.cheap
+  description:
+    en_US: Read passports, ID cards and driver's licences into JSON – $0.01 each.
+  icon: icon.svg
+  icon_dark: icon-dark.svg
+  tags:
+    - business
+    - productivity
+    - image
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+    placeholder:
+      en_US: sk_live_… or sk_sandbox_public
+    help:
+      en_US: A live key (sk_live_…) from the doc.cheap cabinet, or sk_sandbox_public to try the plugin without an account.
+    url: https://doc.cheap/docs/concepts/api-keys-and-sessions
+tools:
+  - tools/recognize_document.yaml
+  - tools/get_scan.yaml
+  - tools/delete_scan.yaml
+  - tools/get_usage.yaml
+extra:
+  python:
+    source: provider/doc_cheap.py

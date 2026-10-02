@@ -1,0 +1,13 @@
+identity:
+  name: get_usage
+  author: doc-cheap
+  label:
+    en_US: Get Usage
+description:
+  human:
+    en_US: Show the account's credit balance and usage. Free.
+  llm: Returns the doc.cheap account's remaining credits and usage for the API key in use. Call it before a batch of recognitions.
+parameters: []
+extra:
+  python:
+    source: tools/get_usage.py

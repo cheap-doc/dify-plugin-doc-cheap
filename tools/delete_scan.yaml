@@ -1,0 +1,22 @@
+identity:
+  name: delete_scan
+  author: doc-cheap
+  label:
+    en_US: Delete Scan
+description:
+  human:
+    en_US: Delete a stored scan result now, before its retention window ends. Free.
+  llm: Deletes a stored doc.cheap scan result by its scan ID.
+parameters:
+  - name: scan_id
+    type: string
+    required: true
+    label:
+      en_US: Scan ID
+    human_description:
+      en_US: The id returned by Recognize Document.
+    llm_description: The scan id to delete.
+    form: llm
+extra:
+  python:
+    source: tools/delete_scan.py
